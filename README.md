@@ -55,7 +55,7 @@ Modify your settings.gradle to include the following
 
 ```gradle
 include ':rangeseekbar'
-project(':rangeseekbar').projectDir = new File('../node_modules/@jesster2k10/react-native-range-slider/crystalrangeseekbar')
+project(':rangeseekbar').projectDir = new File(rootProject.projectDir, '../node_modules/@jesster2k10/react-native-range-slider/android/crystalrangeseekbar')
 ```
 
 ### Step Two
@@ -74,8 +74,10 @@ buildscript {
 ### Step Three
 
 *NOTE: This only applies to react native versions greater than 0.60.0*
+*NOTE: if you don't have a react-native.config.js file, just create one at the root of your project
 
-Adjust your `react-native-config.js` to include the following:
+Adjust your `react-native.config.js` to include the following:
+
 
 ```js
 module.exports = {
